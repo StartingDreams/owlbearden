@@ -1,0 +1,54 @@
+{
+  "parser": "babel-eslint", // https://github.com/babel/babel-eslint
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "test": true,
+    "it": true,
+    "expect": true,
+    "describe": true,
+    "jest": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "__": true
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "destructuring": true,
+    "forOf": true,
+    "generators": false,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": false,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "spread": true,
+    "superInFunctions": true,
+    "templateStrings": true,
+    "jsx": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "import/no-extraneous-dependencies": ["off"], // for unit testing only, will turn off when https://github.com/eslint/eslint/issues/3611 is closed
+    "global-require": ["off"], // for unit testing only, will turn off when https://github.com/eslint/eslint/issues/3611 is closed
+    "react/no-array-index-key": ["off"], // TODO: turn this on when ready
+    "react/require-default-props": ["off"] // TODO: turn this on when ready
+  },
+  "plugins": [
+    "import",
+    "react"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  }
+}
