@@ -9,13 +9,10 @@ cache:
   - functions/node_modules
 install:
   - npm install
-
+  - cd functions && npm install
 script:
- - 'npm test'
+ - 'cd $TEST_DIR && npm install && npm test'
 env:
-  global:
-    - USE_YARN=no
-matrix:
-  include:
-    - node_js: 0.10
-      env: TEST_SUITE=simple
+  - TEST_DIR='./'
+  - TEST_DIR='functions'
+  
