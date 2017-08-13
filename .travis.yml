@@ -14,7 +14,7 @@ jobs:
   include:
     - script: cd $TEST_DIR && npm install && npm test
     - stage: deploy
-      script: npm install firebase-functions
+      script: npm install && cd functions && npm install && cd ..
       script: npm run build
       deploy:
         provider: firebase
