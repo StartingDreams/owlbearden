@@ -32,7 +32,7 @@ Login.propTypes = {
 };
 
 export const mapStateToProps = state => ({
-  isAuthenticated: state.account.get('isAuthenticated'),
+  isAuthenticated: state.auth.get('isAuthenticated'),
 });
 
 export default withRouter(connect(

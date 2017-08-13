@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import firebase from 'firebase';
 import { withRouter } from 'react-router-dom';
-import { login, logout, firebaseConfig } from '../../state/account';
+import { login, logout } from '../../../../state/auth';
 
-firebase.initializeApp(firebaseConfig);
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 
 export class Auth extends React.Component {

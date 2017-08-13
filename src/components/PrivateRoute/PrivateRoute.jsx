@@ -18,7 +18,7 @@ PrivateRoute.propTypes = {
 };
 
 export const mapStateToProps = state => ({
-  isAuthenticated: state.account.get('isAuthenticated'),
+  isAuthenticated: state.auth.get('isAuthenticated'),
   leftDrawerOpen: state.ui.get('leftDrawerOpen'),
 });
 

@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import firebase from 'firebase';
 import { NavLink, withRouter } from 'react-router-dom';
 import { toggleLeftDrawer, closeLeftDrawer } from '../../state/ui';
-import { logout } from '../../state/account';
+import { logout } from '../../state/auth';
 
 export class OwlBearBar extends React.Component {
   toggleLeftDrawerClick = () => {
@@ -77,7 +77,7 @@ OwlBearBar.propTypes = {
 };
 
 export const mapStateToProps = state => ({
-  isAuthenticated: state.account.get('isAuthenticated'),
+  isAuthenticated: state.auth.get('isAuthenticated'),
   leftDrawerOpen: state.ui.get('leftDrawerOpen'),
 });
 
