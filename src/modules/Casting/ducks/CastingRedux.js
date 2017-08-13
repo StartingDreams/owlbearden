@@ -30,7 +30,7 @@ export const parseSpell = spell => (
 export const getAllSpells = () => async (dispatch) => {
   dispatch(getRequest());
   try {
-    const response = await axios.get('http://www.dnd5eapi.co/api/spells');
+    const response = await axios.get('https://us-central1-owlbearsden.cloudfunctions.net/dnd5eapi?path=api/spells');
     const parsedSpells = response.data.results.map(spell => (
       parseSpell(spell)
     ));
