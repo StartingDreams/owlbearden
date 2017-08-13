@@ -1,7 +1,6 @@
 language: node_js
 node_js:
 - 6
-- 8
 cache:
   directories:
   - node_modules
@@ -14,12 +13,15 @@ jobs:
   include:
     - script: cd $TEST_DIR && npm install && npm test
     - stage: deploy
-      before_script:
-       - npm install -g firebase-tools firebase-functions
-      script: npm install && cd functions && npm install && cd ..
-      script: npm run build
+      script:
       deploy:
         provider: firebase
         skip_cleanup: true
+        before_deploy:
+          - npm install
+          - cd functions
+          - npm install
+          - cd -
+          - npm run build
         token:
           secure: TTzPid5aKVADA85qWZaESKyR5j9r2aBR8K5Lw5AVH8dRwRiVjyp9WnWyNHuszsK5ZkiHzK1UGO2/qV2ew1JsZrE0YrapwqCrQnGDYqr8cMp8zVf+Uu2kVcDbJOVlS03ZdRzY8Zml/JkikwoS7+7M4UkRVlIqL3dYsjMe/fY7sV15xVe7R9gh8trLKj6+2XVLgd9sNBEBlxGrNTGytnKZ8TyAYhgLH5Kp3x3GPUuJJxlOwINZtR+0s46JbsAAYzbM76GLjax2pW0MIzo4tYyhLpYDjRl5oS13rbnWffwRVcvNPaKiNtFubzN1EWjeQ0rm9djCSK9j+E4YR/xGTHkOsJmhBuZEcJo+WpEbg66Ndv899fHuoZu9ZwGcGiAX7HZsxkFr1oIit1O49oHFhMdTDf5ddF7hUMJurAuKRiw0lxdLykq85tFOPC2olHmLmKMWLQqOFhyinOH/y8v545ZXHXFToQn3cFJsASYPsC7PHma+BcdRmbYbzMKmvAc1TDdTgUCNDSCZ58jcAVBdPxDUgcP4SXYRXpOc1pSpXW73UgpX2KkjAM8nsjmgrStqGYZqGTW+z2bwzeQqUe8JVYbSWA6HGyWcHX6vTTAWOJAimzmS2YTAlADdXGlDRw9BvTnTUf76qTa5S3OVEwXZy3HedAaeg9DkkysLRlaDEAefZ2g=
