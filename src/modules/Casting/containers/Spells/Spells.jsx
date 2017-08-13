@@ -7,7 +7,10 @@ import Spell from '../../components/Spell';
 
 class Spells extends React.Component {
   componentDidMount() {
-    const { dispatch } = this.props;
+    const { dispatch, spells } = this.props;
+    if (spells.size !== 0) {
+      return;
+    }
     dispatch(CastingActions.getAllSpells());
   }
 

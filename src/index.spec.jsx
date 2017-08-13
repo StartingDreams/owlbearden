@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './containers/Root';
+import Spell from './modules/Casting/components/Spell';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Root />, div);
+  ReactDOM.render(<Spell />, div);
 });

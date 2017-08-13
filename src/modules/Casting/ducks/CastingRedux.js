@@ -1,6 +1,8 @@
 import { fromJS } from 'immutable';
 import axios from 'axios';
 
+const apiUrl = 'https://us-central1-owlbearsden.cloudfunctions.net/dnd5eapi?path=';
+
 export const Types = {
   GET_REQUEST: 'casting/GET_REQUEST',
   GET_SUCCESS: 'casting/GET_SUCCESS',
@@ -30,7 +32,7 @@ export const parseSpell = spell => (
 export const getAllSpells = () => async (dispatch) => {
   dispatch(getRequest());
   try {
-    const response = await axios.get('https://us-central1-owlbearsden.cloudfunctions.net/dnd5eapi?path=api/spells');
+    const response = await axios.get(`${apiUrl}api/spells`);
     const parsedSpells = response.data.results.map(spell => (
       parseSpell(spell)
     ));

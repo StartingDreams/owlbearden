@@ -5,9 +5,13 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
 import { Theme } from '../../styleguide';
 import OwlBearBar from '../../modules/OwlBearBar';
-import Home from '../../modules/Dashboard';
+import Dashboard from '../../modules/Dashboard';
+import NoMatch from '../../components/NoMatch';
+import Auth from '../../containers/Auth';
+import Login from '../../modules/Login';
 import Spells from '../../modules/Casting/containers/Spells';
 import createStore from '../../state';
+import PrivateRoute from '../../components/PrivateRoute';
 
 const store = createStore();
 
@@ -19,10 +23,13 @@ export default function Root() {
           <div>
             <BrowserRouter>
               <div>
+                <Auth />
                 <OwlBearBar />
                 <Paper zDepth={1} style={{ margin: 0, padding: '10px' }}>
-                  <Route exact path="/" component={Home} />
-                  <Route path="/casting/spells" component={Spells} />
+                  <Route exact path="/login" component={Login} />
+                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                  <PrivateRoute exact path="/casting/spells" component={Spells} />
+                  <Route component={NoMatch} />
                 </Paper>
               </div>
             </BrowserRouter>
