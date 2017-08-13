@@ -14,7 +14,7 @@ jobs:
   include:
     - script: cd $TEST_DIR && npm install && npm test
     - stage: deploy
-      script: npm run build
+      script: npm install && npm run build
       deploy:
         provider: firebase
         skip_cleanup: true
