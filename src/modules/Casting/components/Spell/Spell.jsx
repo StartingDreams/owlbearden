@@ -6,7 +6,6 @@ import { Card, CardHeader, CardText } from 'material-ui/Card';
 export class Spell extends React.PureComponent {
   render() {
     const { spell } = this.props;
-    console.log(spell);
     const subtitle = `Level: ${spell.get('level')}, Range: ${spell.get('range')}, Casting Time: ${spell.get('casting_time')}`;
     return (
       <Card>
