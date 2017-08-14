@@ -7,8 +7,7 @@ import { Theme } from '../../styleguide';
 import OwlBearBar from '../../modules/OwlBearBar';
 import Dashboard from '../../modules/Dashboard';
 import NoMatch from '../../components/NoMatch';
-import Firebase from '../../modules/Firebase/containers/Firebase';
-import Auth from '../../modules/Firebase/containers/Auth';
+import Firebase from '../../modules/Firebase';
 import Login from '../../modules/Firebase/containers/Login';
 import Spells from '../../modules/Casting/containers/Spells';
 import createStore from '../../state';
@@ -25,7 +24,6 @@ export default function Root() {
             <BrowserRouter>
               <div>
                 <Firebase />
-                <Auth />
                 <OwlBearBar />
                 <Paper zDepth={1} style={{ margin: 0, padding: '10px' }}>
                   <Route exact path="/login" component={Login} />
