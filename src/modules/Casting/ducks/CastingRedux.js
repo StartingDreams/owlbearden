@@ -1,7 +1,9 @@
 import { fromJS } from 'immutable';
 import axios from 'axios';
+import firebase from 'firebase';
 
-const apiUrl = 'https://us-central1-owlbearsden.cloudfunctions.net/dnd5eapi?path=';
+const dnd5eapiUrl = 'https://us-central1-owlbearsden.cloudfunctions.net/dnd5eapi?path=';
+const database = firebase.database();
 
 export const Types = {
   GET_REQUEST: 'casting/GET_REQUEST',
@@ -29,16 +31,31 @@ export const parseSpell = spell => (
   })
 );
 
-export const getAllSpells = () => async (dispatch) => {
+export const getAllSpellsFrom5edndapi = () => async (dispatch) => {
   dispatch(getRequest());
   try {
-    const response = await axios.get(`${apiUrl}api/spells`);
+    const response = await axios.get(`${dnd5eapiUrl}api/spells`);
     const parsedSpells = response.data.results.map(spell => (
       parseSpell(spell)
     ));
 
     const spells = fromJS(parsedSpells);
     dispatch(getSuccess(spells));
+  } catch (error) {
+    dispatch(getFailure(error.message));
+  }
+};
+
+export const getAllSpells = () => async (dispatch) => {
+  dispatch(getRequest());
+  try {
+    database.ref('dnd/casting/spells/').once('value', (snapshot) => {
+      const rawSpells = Object.values(snapshot.val());
+      const spells = fromJS(rawSpells);
+      dispatch(getSuccess(spells));
+    }, (error) => {
+      dispatch(getFailure(error.message));
+    });
   } catch (error) {
     dispatch(getFailure(error.message));
   }

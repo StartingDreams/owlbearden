@@ -33,7 +33,7 @@ Spells.propTypes = {
   dispatch: PropTypes.func,
   spells: ImmutablePropTypes.listOf(
     ImmutablePropTypes.contains({
-      something: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
     }),
   ),
 };
