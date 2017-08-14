@@ -7,7 +7,7 @@ export class Spell extends React.PureComponent {
   render() {
     const { spell } = this.props;
     console.log(spell);
-    const subtitle = `level: ${spell.get('level')}, range: ${spell.get('range')}, casting time: ${spell.get('casting_time')}`;
+    const subtitle = `Level: ${spell.get('level')}, Range: ${spell.get('range')}, Casting Time: ${spell.get('casting_time')}`;
     return (
       <Card>
         <CardHeader
