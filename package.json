@@ -27,6 +27,7 @@
     "file-loader": "0.11.2",
     "firebase": "^4.2.0",
     "firebase-functions": "^0.6.1",
+    "flow-bin": "^0.52.0",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "immutable": "^3.8.1",
@@ -61,7 +62,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "flow": "flow"
   },
   "jest": {
     "collectCoverageFrom": [
