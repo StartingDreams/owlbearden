@@ -11,8 +11,8 @@ install:
   - npm install
   - cd functions && npm install && cd -
 script:
-  - npm test
-  - cd functions && npm test && cd -
+  - yarn test -- --coverage
+  - cd functions && yarn test -- --coverage && cd -
   - npm run build
 deploy:
   provider: firebase
