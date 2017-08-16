@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 export class NoMatch extends React.Component {
   goLogin = () => (<Redirect to={{ pathname: '/login' }} />);
   goDashboard = () => (<Redirect to={{ pathname: '/dashboard' }} />);
-
   render = () => (this.props.isAuthenticated ? (this.goDashboard()) : (this.goLogin()));
 }
 
@@ -16,7 +15,6 @@ NoMatch.propTypes = {
 
 export const mapStateToProps = state => ({
   isAuthenticated: state.auth.get('isAuthenticated'),
-  leftDrawerOpen: state.ui.get('leftDrawerOpen'),
 });
 
 export default withRouter(connect(

@@ -27,7 +27,7 @@ export default function reducer(state = INITIAL_STATE, action = {}) {
         .set('isAuthenticated', true));
     case Types.LOGOUT:
       return state.withMutations(s => s
-        .set('user', fromJS(action.user))
+        .set('user', null)
         .set('isAuthenticated', false));
     default:
       return state;

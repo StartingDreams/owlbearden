@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PrivateRoute /> authenticated users should match the dashboard snapshot 1`] = `
+<div>
+  Authenticated
+</div>
+`;
+
+exports[`<PrivateRoute /> unauthenticated users should match the login snapshot 1`] = `
+<Redirect
+  to={
+    Object {
+      "pathname": "/login",
+    }
+  }
+/>
+`;

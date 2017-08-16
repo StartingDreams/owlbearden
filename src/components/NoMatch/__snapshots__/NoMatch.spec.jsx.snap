@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NoMatch /> authenticated users should match the dashboard snapshot 1`] = `
+<Redirect
+  push={false}
+  to={
+    Object {
+      "pathname": "/dashboard",
+    }
+  }
+/>
+`;
+
+exports[`<NoMatch /> unauthenticated users should match the login snapshot 1`] = `
+<Redirect
+  push={false}
+  to={
+    Object {
+      "pathname": "/login",
+    }
+  }
+/>
+`;

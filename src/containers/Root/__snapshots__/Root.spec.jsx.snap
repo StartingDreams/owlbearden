@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Root /> should match the snapshot 1`] = `
+<Provider>
+  <div
+    id="react-root"
+  >
+    <MuiThemeProvider
+      muiTheme="Theme"
+    >
+      <div>
+        <BrowserRouter>
+          <div>
+            <Firebase />
+            <OwlBearBar />
+            <Paper
+              style={
+                Object {
+                  "margin": 0,
+                  "padding": "10px",
+                }
+              }
+              zDepth={1}
+            >
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
+              />
+              <PrivateRoute
+                component={[Function]}
+                exact={true}
+                path="/dashboard"
+              />
+              <PrivateRoute
+                component={[Function]}
+                exact={true}
+                path="/casting/spells"
+              />
+              <Route
+                component={[Function]}
+              />
+            </Paper>
+          </div>
+        </BrowserRouter>
+      </div>
+    </MuiThemeProvider>
+  </div>
+</Provider>
+`;

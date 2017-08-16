@@ -4,7 +4,7 @@ import auth from './auth';
 import ui from './ui';
 import casting from '../modules/Casting/ducks/CastingRedux';
 
-export default () => {
+export function createStore() {
   const rootReducer = combineReducers({
     auth,
     ui,
@@ -12,4 +12,6 @@ export default () => {
   });
 
   return configureStore(rootReducer);
-};
+}
+
+export default createStore;

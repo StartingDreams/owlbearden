@@ -3,7 +3,7 @@ import { Redirect, Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-const PrivateRoute = ({ component: Component, isAuthenticated, ...rest }) => (
+export const PrivateRoute = ({ component: Component, isAuthenticated, ...rest }) => (
   <Route
     {...rest}
     render={props => (isAuthenticated ?
@@ -19,7 +19,6 @@ PrivateRoute.propTypes = {
 
 export const mapStateToProps = state => ({
   isAuthenticated: state.auth.get('isAuthenticated'),
-  leftDrawerOpen: state.ui.get('leftDrawerOpen'),
 });
 
 export default withRouter(connect(

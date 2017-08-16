@@ -10,7 +10,7 @@ import NoMatch from '../../components/NoMatch';
 import Firebase from '../../modules/Firebase';
 import Login from '../../modules/Firebase/containers/Login';
 import Spells from '../../modules/Casting/containers/Spells';
-import createStore from '../../state';
+import { createStore } from '../../state';
 import PrivateRoute from '../../components/PrivateRoute';
 
 const store = createStore();
