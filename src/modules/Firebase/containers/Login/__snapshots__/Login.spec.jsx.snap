@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> authenticated should match the home snapshot 1`] = `
+<Redirect
+  push={false}
+  to={
+    Object {
+      "pathname": "/",
+    }
+  }
+/>
+`;
+
+exports[`<Login /> unauthenticated should match the login snapshot 1`] = `
+<RaisedButton
+  disabled={false}
+  fullWidth={true}
+  icon={
+    <FontIcon
+      className="material-icons"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      account_circle
+    </FontIcon>
+  }
+  label="Login"
+  labelPosition="after"
+  onClick={[Function]}
+  primary={false}
+  secondary={true}
+/>
+`;

@@ -7,21 +7,21 @@ import PropTypes from 'prop-types';
 import firebase from 'firebase';
 
 const auth = firebase.auth;
-const provider = new firebase.auth.GoogleAuthProvider();
+const provider = new auth.GoogleAuthProvider();
+
+export const loginClick = () => {
+  auth().signInWithRedirect(provider);
+};
 
 export class Login extends React.Component {
-  loginClick = async () => {
-    await auth().signInWithRedirect(provider);
-  };
-
-  redirect = () => (<Redirect to={{ pathname: '/login' }} />);
+  redirect = () => (<Redirect to={{ pathname: '/' }} />);
 
   renderLogin = () => (<RaisedButton
     icon={<FontIcon className="material-icons">account_circle</FontIcon>}
     label="Login"
     secondary
     fullWidth
-    onClick={this.loginClick}
+    onClick={loginClick}
   />);
 
   render = () => (this.props.isAuthenticated ? (this.redirect()) : (this.renderLogin()));

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Firebase /> spell should match the snapshot 1`] = `
+<div>
+  <Init />
+  <Auth />
+</div>
+`;

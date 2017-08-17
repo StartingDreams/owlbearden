@@ -1,7 +1,7 @@
 import { fromJS } from 'immutable';
 import reducer, * as auth from './auth';
 
-describe('reducers', () => {
+describe('auth_redux', () => {
   describe('GET_REQUEST', () => {
     it('should login', () => {
       const user = 'user';
@@ -16,6 +16,8 @@ describe('reducers', () => {
       expect(newState.get('user')).toBe(null);
       expect(newState.get('isAuthenticated')).toBe(false);
     });
+  });
+  describe('reducers', () => {
     it('should return the state', () => {
       const state = fromJS({
         some: 'state',

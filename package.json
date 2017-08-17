@@ -75,6 +75,7 @@
       "!src/**/index.{js,jsx}",
       "!src/styleguide/*",
       "!src/state/CreateStore/*",
+      "!src/modules/Firebase/config.js",
       "!src/registerServiceWorker.js"
 
     ],
