@@ -24,7 +24,9 @@ jest.mock('material-ui/styles/MuiThemeProvider', () => (function MuiThemeProvide
 
 jest.mock('material-ui/Paper', () => (function Paper() {}));
 
-jest.mock('../../modules/OwlBearBar', () => (function OwlBearBar() {}));
+jest.mock('../../components/Header', () => (function Header() {}));
+
+jest.mock('../../components/Sidebar', () => (function Sidebar() {}));
 
 jest.mock('../../modules/Dashboard', () => (function Dashboard() {}));
 

@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should match the authenticated snapshot 1`] = `
+<AppBar
+  iconElementLeft={
+    <IconButton
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        menu
+      </FontIcon>
+    </IconButton>
+  }
+  iconElementRight={
+    <FlatButton
+      disabled={false}
+      fullWidth={false}
+      id="head-logout-button"
+      label="Logout"
+      labelPosition="after"
+      labelStyle={Object {}}
+      onClick={[Function]}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
+      primary={false}
+      secondary={false}
+    />
+  }
+  onLeftIconButtonTouchTap={[Function]}
+  onTitleTouchTap={[Function]}
+  showMenuIconButton={true}
+  title={
+    <span
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    >
+      Owlbear's Den
+    </span>
+  }
+  zDepth={1}
+/>
+`;
+
+exports[`<Header /> should match the unauthenticated snapshot 1`] = `
+<AppBar
+  iconElementLeft={
+    <IconButton
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        menu
+      </FontIcon>
+    </IconButton>
+  }
+  iconElementRight={<span />}
+  onLeftIconButtonTouchTap={[Function]}
+  onTitleTouchTap={[Function]}
+  showMenuIconButton={true}
+  title={
+    <span
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    >
+      Owlbear's Den
+    </span>
+  }
+  zDepth={1}
+/>
+`;

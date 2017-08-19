@@ -5,7 +5,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Theme } from '../../styleguide';
-import OwlBearBar from '../../modules/OwlBearBar';
+import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
+
 import Dashboard from '../../modules/Dashboard';
 import NoMatch from '../../components/NoMatch';
 import Firebase from '../../modules/Firebase';
@@ -26,13 +28,14 @@ export default function Root() {
             <BrowserRouter>
               <div>
                 <Firebase />
-                <OwlBearBar />
+                <Header />
                 <Paper zDepth={1} style={{ margin: 0, padding: '10px' }}>
                   <Route exact path="/login" component={Login} />
                   <PrivateRoute exact path="/dashboard" component={Dashboard} />
                   <PrivateRoute exact path="/casting/spells" component={Spells} />
                   <Route component={NoMatch} />
                 </Paper>
+                <Sidebar />
               </div>
             </BrowserRouter>
           </div>

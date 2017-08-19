@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar /> should match the snapshot 1`] = `
+<Drawer
+  containerStyle={
+    Object {
+      "top": "64px",
+    }
+  }
+  disableSwipeToOpen={false}
+  docked={true}
+  open={false}
+  openSecondary={false}
+  swipeAreaWidth={30}
+  width={null}
+  zDepth={2}
+>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    containerElement={
+      <NavLink
+        activeClassName="active"
+        to="/dashboard"
+      />
+    }
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    leftIcon={
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        dashboard
+      </FontIcon>
+    }
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+  >
+    Dashboard
+  </MenuItem>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    containerElement={
+      <NavLink
+        activeClassName="active"
+        to="/casting/spells"
+      />
+    }
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    leftIcon={
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        whatshot
+      </FontIcon>
+    }
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+  >
+    Spells
+  </MenuItem>
+</Drawer>
+`;
