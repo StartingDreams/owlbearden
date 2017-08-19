@@ -42,6 +42,7 @@ exports[`<Sidebar /> should match the snapshot 1`] = `
         dashboard
       </FontIcon>
     }
+    onTouchTap={[Function]}
     targetOrigin={
       Object {
         "horizontal": "left",
@@ -78,6 +79,7 @@ exports[`<Sidebar /> should match the snapshot 1`] = `
         whatshot
       </FontIcon>
     }
+    onTouchTap={[Function]}
     targetOrigin={
       Object {
         "horizontal": "left",

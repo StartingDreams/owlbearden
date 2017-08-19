@@ -22,8 +22,9 @@ export class Header extends React.Component {
   };
 
   logoutClick = async () => {
-    await firebase.auth().signOut();
     const { dispatch } = this.props;
+    this.closeLeftDrawerClick();
+    await firebase.auth().signOut();
     dispatch(logout());
     this.props.history.push('/login');
   };
