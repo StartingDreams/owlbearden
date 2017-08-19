@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Theme } from '../../styleguide';
 import OwlBearBar from '../../modules/OwlBearBar';
 import Dashboard from '../../modules/Dashboard';
@@ -13,6 +14,7 @@ import Spells from '../../modules/Casting/containers/Spells';
 import { createStore } from '../../state';
 import PrivateRoute from '../../components/PrivateRoute';
 
+injectTapEventPlugin();
 const store = createStore();
 
 export default function Root() {

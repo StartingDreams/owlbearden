@@ -3,11 +3,8 @@ import { Card, CardActions, CardTitle, CardText } from 'material-ui/Card';
 import { NavLink } from 'react-router-dom';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-injectTapEventPlugin();
-
-const Dashboard = () => (
+export const Dashboard = () => (
   <Card>
     <CardTitle title="Casting" subtitle="Spell helpers" />
     <CardText>

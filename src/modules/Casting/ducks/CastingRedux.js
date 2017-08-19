@@ -1,8 +1,6 @@
 import { fromJS } from 'immutable';
-import axios from 'axios';
 import firebase from 'firebase';
 
-const dnd5eapiUrl = 'https://us-central1-owlbearsden.cloudfunctions.net/dnd5eapi?path=';
 const database = firebase.database();
 
 export const Types = {
@@ -25,32 +23,12 @@ export const getFailure = error => ({
   error,
 });
 
-export const parseSpell = spell => (
-  Object.assign({}, spell, {
-    something: 'custom',
-  })
-);
-
-export const getAllSpellsFrom5edndapi = () => async (dispatch) => {
-  dispatch(getRequest());
+export const getAllSpells = (dispatch) => {
   try {
-    const response = await axios.get(`${dnd5eapiUrl}api/spells`);
-    const parsedSpells = response.data.results.map(spell => (
-      parseSpell(spell)
-    ));
-
-    const spells = fromJS(parsedSpells);
-    dispatch(getSuccess(spells));
-  } catch (error) {
-    dispatch(getFailure(error.message));
-  }
-};
-
-export const getAllSpells = () => async (dispatch) => {
-  dispatch(getRequest());
-  try {
+    dispatch(getRequest());
     database.ref('dnd/casting/spells/').once('value', (snapshot) => {
-      const rawSpells = Object.values(snapshot.val());
+      const values = snapshot.val();
+      const rawSpells = Object.keys(values).map(key => (values[key]));
       const spells = fromJS(rawSpells);
       dispatch(getSuccess(spells));
     }, (error) => {
@@ -73,8 +51,8 @@ export default function reducer(state = INITIAL_STATE, action = {}) {
       return state.set('fetching', true);
     case Types.GET_SUCCESS:
       return state.withMutations(s => s
-        .set('spells', fromJS(action.spells))
-        .set('fetching', false));
+        .set('spells', fromJS(action.spells)))
+        .set('fetching', false);
     case Types.GET_FAILURE:
       return state.set('fetching', false);
     default:

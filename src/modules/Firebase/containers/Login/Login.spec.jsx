@@ -21,7 +21,6 @@ const auth = firebase.auth;
 describe('<Login />', () => {
   it('login click should call signInWithRedirect', () => {
     loginClick();
-    // wrapper.find('RaisedButton').simulate('touchTap');
     expect(auth().signInWithRedirect).toHaveBeenCalledWith({ test: 'test' });
   });
   it('mapStateToProps - isAuthenticated should be passed in', () => {

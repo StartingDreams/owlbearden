@@ -5,13 +5,13 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import * as CastingActions from '../../ducks/CastingRedux';
 import Spell from '../../components/Spell';
 
-class Spells extends React.Component {
+export class Spells extends React.Component {
   componentDidMount() {
     const { dispatch, spells } = this.props;
     if (spells.size !== 0) {
       return;
     }
-    dispatch(CastingActions.getAllSpells());
+    CastingActions.getAllSpells(dispatch);
   }
 
   render() {
