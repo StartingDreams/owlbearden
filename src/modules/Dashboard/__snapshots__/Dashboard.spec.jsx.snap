@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Init /> spell should match the snapshot 1`] = `
+<Card
+  expandable={false}
+  expanded={null}
+  initiallyExpanded={false}
+>
+  <CardTitle
+    subtitle="Spell helpers"
+    title="Casting"
+  />
+  <CardText>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque. Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+  </CardText>
+  <CardActions>
+    <FlatButton
+      containerElement={
+        <NavLink
+          activeClassName="active"
+          to="/casting/spells"
+        />
+      }
+      disabled={false}
+      fullWidth={false}
+      icon={
+        <FontIcon
+          className="material-icons"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          whatshot
+        </FontIcon>
+      }
+      label="Spells"
+      labelPosition="after"
+      labelStyle={Object {}}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
+      primary={false}
+      secondary={false}
+    />
+  </CardActions>
+</Card>
+`;

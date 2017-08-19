@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Auth /> persistence should be set 1`] = `null`;
+
+exports[`<Auth /> should match the login snapshot 1`] = `null`;
