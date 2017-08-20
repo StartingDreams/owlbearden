@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpellList /> two spells should match the snapshot 1`] = `
+<div>
+  <Component />
+  <Component
+    spell={
+      Immutable.Map {
+        ritual: "no",
+        level: 2,
+        classes: Immutable.List [
+          Immutable.Map {
+            name: "Wizard",
+            url: "http://www.dnd5eapi.co/api/classes/12",
+          },
+        ],
+        subclasses: Immutable.List [
+          Immutable.Map {
+            name: "Lore",
+            url: "http://www.dnd5eapi.co/api/subclasses/2",
+          },
+          Immutable.Map {
+            name: "Land",
+            url: "http://www.dnd5eapi.co/api/subclasses/4",
+          },
+        ],
+        material: "Powdered rhubarb leaf and an adder’s stomach.",
+        casting_time: "1 action",
+        name: "Acid Arrow",
+        concentration: "no",
+        url: "http://www.dnd5eapi.co/api/spells/1",
+        page: "phb 259",
+        desc: Immutable.List [
+          "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
+        ],
+        index: 1,
+        higher_level: Immutable.List [
+          "When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd.",
+        ],
+        duration: "Instantaneous",
+        school: Immutable.Map {
+          name: "Evocation",
+          url: "http://www.dnd5eapi.co/api/magic-schools/5",
+        },
+        components: Immutable.List [
+          "V",
+          "S",
+          "M",
+        ],
+        id: "58f40b80c9e7ce9f72153112",
+        range: "90 feet",
+      }
+    }
+  />
+  <Component
+    spell={
+      Immutable.Map {
+        ritual: "yes",
+        level: 5,
+        classes: Immutable.List [
+          Immutable.Map {
+            name: "Cleric",
+            url: "http://www.dnd5eapi.co/api/classes/3",
+          },
+        ],
+        subclasses: Immutable.List [
+          Immutable.Map {
+            name: "Devotion",
+            url: "http://www.dnd5eapi.co/api/subclasses/7",
+          },
+        ],
+        material: "Incense and a vial of holy or unholy water.",
+        casting_time: "1 minute",
+        name: "Commune",
+        concentration: "no",
+        url: "http://www.dnd5eapi.co/api/spells/45",
+        page: "phb 223",
+        desc: Immutable.List [
+          "You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.",
+          "Divine beings aren’t necessarily omniscient, so you might receive “unclear” as an answer if a question pertains to information that lies beyond the deity’s knowledge. In a case where a one-word answer could be misleading or contrary to the deity’s interests, the DM might offer a short phrase as an answer instead.",
+          "If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret.",
+        ],
+        index: 45,
+        duration: "1 minute",
+        school: Immutable.Map {
+          name: "Divination",
+          url: "http://www.dnd5eapi.co/api/magic-schools/3",
+        },
+        components: Immutable.List [
+          "V",
+          "S",
+          "M",
+        ],
+        id: "58f40b80c9e7ce9f72153149",
+        range: "Self",
+      }
+    }
+  />
+  <Component
+    spell={
+      Immutable.Map {
+        ritual: "no",
+        level: 1,
+        classes: Immutable.List [
+          Immutable.Map {
+            name: "Paladin",
+            url: "http://www.dnd5eapi.co/api/classes/7",
+          },
+        ],
+        subclasses: Immutable.List [
+          Immutable.Map {
+            name: "Lore",
+            url: "http://www.dnd5eapi.co/api/subclasses/2",
+          },
+        ],
+        casting_time: "1 bonus action",
+        name: "Divine Favor",
+        concentration: "yes",
+        url: "http://www.dnd5eapi.co/api/spells/84",
+        page: "phb 234",
+        desc: Immutable.List [
+          "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.",
+        ],
+        index: 84,
+        duration: "Up to 1 minute",
+        school: Immutable.Map {
+          name: "Evocation",
+          url: "http://www.dnd5eapi.co/api/magic-schools/5",
+        },
+        components: Immutable.List [
+          "V",
+          "S",
+        ],
+        id: "58f40b80c9e7ce9f72153164",
+        range: "Self",
+      }
+    }
+  />
+</div>
+`;

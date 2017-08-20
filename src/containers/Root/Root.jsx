@@ -12,7 +12,7 @@ import Dashboard from '../../modules/Dashboard';
 import NoMatch from '../../components/NoMatch';
 import Firebase from '../../modules/Firebase';
 import Login from '../../modules/Firebase/containers/Login';
-import Spells from '../../modules/Casting/containers/Spells';
+import SpellList from '../../modules/Casting/containers/SpellList';
 import { createStore } from '../../state';
 import PrivateRoute from '../../components/PrivateRoute';
 
@@ -32,7 +32,7 @@ export default function Root() {
                 <Paper zDepth={1} style={{ margin: 0, padding: '10px' }}>
                   <Route exact path="/login" component={Login} />
                   <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                  <PrivateRoute exact path="/casting/spells" component={Spells} />
+                  <PrivateRoute exact path="/casting/spells" component={SpellList} />
                   <Route component={NoMatch} />
                 </Paper>
                 <Sidebar />

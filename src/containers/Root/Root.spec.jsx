@@ -36,7 +36,7 @@ jest.mock('../../modules/Firebase', () => (function Firebase() {}));
 
 jest.mock('../../modules/Firebase/containers/Login', () => (function Login() {}));
 
-jest.mock('../../modules/Casting/containers/Spells', () => (function Spells() {}));
+jest.mock('../../modules/Casting/containers/SpellList', () => (function Spells() {}));
 
 jest.mock('../../components/PrivateRoute', () => (function PrivateRoute() {}));
 
