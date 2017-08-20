@@ -23,7 +23,6 @@ export const filterSpells = (filters, spells) => {
       }
       return null;
     });
-    console.log('spell classes', spellClasses);
     return spellClasses.find(className => (classes.indexOf(className) !== -1));
   };
   return spells
